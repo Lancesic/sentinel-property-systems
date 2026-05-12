@@ -1,29 +1,31 @@
 import { BatteryWarning, Building2, Camera, CheckCircle2, Church, CloudOff, Construction, DoorOpen, EyeOff, FileText, Home, KeyRound, LockKeyhole, MonitorCheck, Network, RadioTower, RefreshCcw, Router, ShieldCheck, Store, Warehouse, WifiOff, Wrench } from "lucide-react";
 
 export const problems = [
-  { title: "Undocumented wiring", icon: FileText },
   { title: "Offline cameras", icon: CloudOff },
-  { title: "Weak Wi-Fi", icon: WifiOff },
-  { title: "App and password confusion", icon: LockKeyhole },
+  { title: "Weak Wi-Fi coverage", icon: WifiOff },
+  { title: "Unknown passwords", icon: LockKeyhole },
+  { title: "Unlabeled systems", icon: FileText },
   { title: "Dead batteries", icon: BatteryWarning },
-  { title: "Poor camera placement", icon: EyeOff },
-  { title: "Cheap hardware", icon: MonitorCheck },
-  { title: "No maintenance plan", icon: RefreshCcw }
+  { title: "Unsupported hardware", icon: MonitorCheck },
+  { title: "Poor camera visibility", icon: EyeOff },
+  { title: "No maintenance ownership", icon: RefreshCcw }
 ];
 
-export const services = [
-  { title: "New Security Camera Installations", icon: Camera, copy: "Clean PoE camera systems, doorbell cameras, remote viewing, recording setup, and camera placement planning." },
-  { title: "Wi-Fi & Network Foundation", icon: Network, copy: "Routers, access points, PoE switches, cabling, and network layouts designed to support cameras and smart devices." },
-  { title: "Smart Locks & Access Control", icon: KeyRound, copy: "Keypads, smart locks, access permissions, gates, employee entry, and controlled access setup." },
-  { title: "Maintenance Plans", icon: ShieldCheck, copy: "Routine system checks, camera health review, update support, battery planning, access review, and priority support." },
-  { title: "Jobsite & Contractor Systems", icon: Construction, copy: "Temporary or permanent camera/network setups for contractors, material storage, gates, and active project locations." },
-  { title: "Legacy System Evaluation", icon: Wrench, copy: "We review existing systems and recommend repair, stabilization, upgrade, or replacement. We do not promise unlimited repair on unsupported or unsafe legacy systems." }
+export const systems = [
+  { title: "Smart Camera Systems", icon: Camera, copy: "PoE-first camera systems, remote viewing, recording infrastructure, camera placement planning, and visibility optimization." },
+  { title: "Network & Wi-Fi Infrastructure", icon: Network, copy: "Gateways, PoE switches, access points, structured connectivity, and security-focused network design." },
+  { title: "Smart Locks & Access Control", icon: KeyRound, copy: "Controlled entry systems, keypads, smart locks, employee access, gate management, and permission-based access." },
+  { title: "Property Visibility Systems", icon: RadioTower, copy: "Integrated visibility environments for homes, offices, retail, warehouses, contractors, and jobsites." },
+  { title: "System Documentation", icon: FileText, copy: "Device inventory, access handoff, topology mapping, visibility planning, and maintenance records." },
+  { title: "Maintenance Plans", icon: ShieldCheck, copy: "Recurring operational reviews, system health checks, update guidance, support, and infrastructure upkeep." }
 ];
+
+export const services = systems;
 
 export const plans = [
-  { name: "Sentinel Checkup", audience: "Best for new customers or existing properties.", cta: "Book a Checkup", features: ["Current system review", "Camera and Wi-Fi check", "Device inventory", "App/access review", "Blind spot notes", "Repair vs upgrade recommendation"] },
-  { name: "Sentinel Care", audience: "Best for homes and small offices with Sentinel-installed or approved systems.", cta: "Request Maintenance", featured: true, features: ["Quarterly system review", "Camera health check", "Battery/device check", "Firmware/update guidance", "App and access support", "Priority troubleshooting"] },
-  { name: "Sentinel Business Guardian", audience: "Best for businesses, churches, offices, warehouses, and contractor properties.", cta: "Get Business Plan", features: ["Monthly or quarterly maintenance", "Camera/network health review", "Access control support", "User/access permission review", "Incident support", "Priority service", "Upgrade planning"] }
+  { name: "Sentinel Checkup", audience: "New customer evaluation or property assessment.", cta: "Book a Checkup", features: ["Camera review", "Wi-Fi review", "Device inventory", "Blind spot analysis", "Access review", "Repair vs replacement guidance", "Maintenance eligibility evaluation"] },
+  { name: "Sentinel Care", audience: "Homes and small offices with Sentinel-installed or approved systems.", cta: "Request Maintenance", featured: true, features: ["Quarterly operational review", "Camera health checks", "Device and battery review", "Update guidance", "App/access support", "Priority troubleshooting"] },
+  { name: "Sentinel Business Guardian", audience: "Businesses, warehouses, contractors, churches, offices, retail, and multi-property operations.", cta: "Get Business Plan", features: ["Monthly or quarterly maintenance", "Network and camera health reviews", "Access-control support", "User permission reviews", "Incident support", "Annual optimization planning", "Priority response"] }
 ];
 
 export const industries = [
@@ -34,27 +36,31 @@ export const industries = [
   { title: "Churches", icon: Church },
   { title: "Warehouses", icon: Warehouse },
   { title: "Contractors & Jobsites", icon: Construction },
-  { title: "Rentals / Airbnb", icon: DoorOpen }
+  { title: "Airbnb / Rentals", icon: DoorOpen },
+  { title: "Multi-property Owners", icon: Building2 }
 ];
 
-export const serviceDetails = [
-  { title: "New Camera System Installation", icon: Camera, copy: "Security camera installation for homes, offices, churches, warehouses, retail, and jobsite properties. We design clean PoE camera installation layouts, recording options, remote viewing, and camera placement around coverage and maintainability." },
-  { title: "Network & Wi-Fi Foundation", icon: Router, copy: "Smart security depends on the network underneath it. We design router, access point, PoE switch, cabling, and Wi-Fi layouts that support cameras, smart locks, access control, and remote management-ready systems." },
-  { title: "Smart Locks & Access Control", icon: KeyRound, copy: "Smart lock installer and access control installation for keypads, gates, office entry, employee permissions, schedules, rental access, and controlled property access." },
-  { title: "Jobsite Security Systems", icon: Construction, copy: "Camera and network systems for contractors, material storage, active project locations, gates, equipment yards, and temporary or permanent jobsite security cameras." },
-  { title: "System Documentation", icon: FileText, copy: "Clear device lists, network layout notes, camera placement notes, app/admin access documentation, and maintenance recommendations so the system does not become a mystery later." },
-  { title: "Maintenance Plans", icon: ShieldCheck, copy: "Camera system maintenance and property technology maintenance for Sentinel-installed, Sentinel-upgraded, or Sentinel-approved systems after evaluation." },
-  { title: "Legacy System Evaluation", icon: Wrench, copy: "Existing system evaluation for cameras, DVRs, wiring, Wi-Fi, locks, and access control. We recommend stabilize, replace components, upgrade to a supported system, or start fresh." },
-  { title: "Approved Hardware Stack", icon: CheckCircle2, copy: "We prefer standardized, serviceable camera and network ecosystems: clean PoE-based security systems, locally stored video options, managed Wi-Fi, access control, and hardware that can be supported over time." }
+export const systemDetails = [
+  { title: "Camera Infrastructure", icon: Camera, copy: "PoE camera installation, camera placement planning, recording strategy, local video options, remote viewing, and visibility optimization for modern properties." },
+  { title: "Network & Wi-Fi Foundation", icon: Router, copy: "Gateways, access points, PoE switches, structured connectivity, Wi-Fi infrastructure, and smart property networks designed around reliability." },
+  { title: "Smart Access Systems", icon: KeyRound, copy: "Access control systems, smart locks, keypads, gate access, user permissions, employee access, and controlled entry handoff." },
+  { title: "Property Visibility Architecture", icon: RadioTower, copy: "A full visibility plan that connects cameras, Wi-Fi, access, dashboards, documentation, and maintenance into one supportable environment." },
+  { title: "Jobsite Visibility Systems", icon: Construction, copy: "Jobsite visibility systems for contractors, material storage, gates, temporary projects, equipment yards, and active construction sites." },
+  { title: "Structured Cabling & PoE", icon: Network, copy: "Clean PoE-first design, labeled equipment where practical, organized network layouts, and infrastructure built to be maintained." },
+  { title: "Documentation & Operational Handoff", icon: FileText, copy: "Device inventories, topology notes, admin/app handoff, camera placement documentation, maintenance records, and upgrade path planning." },
+  { title: "Maintenance Readiness", icon: CheckCircle2, copy: "Approved hardware stack thinking, remote support readiness, maintenance-ready infrastructure, and long-term operational visibility planning." }
 ];
+
+export const serviceDetails = systemDetails;
 
 export const industryDetails = [
-  ["Homeowners", "Clean smart security installer support for cameras, Wi-Fi, smart locks, doorbells, local video options, and recurring maintenance on systems that are built to be serviced."],
-  ["Small businesses", "Business security systems with documented cameras, network foundation, access permissions, recording setup, and camera system maintenance."],
-  ["Contractors", "Jobsite security cameras and network setups for materials, equipment, gates, temporary locations, and active projects that need dependable visibility."],
-  ["Retail", "Commercial camera installation, Wi-Fi camera support, access control, and maintenance planning for customer-facing spaces."],
-  ["Offices", "Smart locks, access control installation, employee entry, common-area cameras, Wi-Fi foundation, and documentation."],
-  ["Churches", "Security camera installation and maintenance for sanctuaries, offices, classrooms, entrances, parking areas, and shared access needs."],
-  ["Warehouses", "PoE camera installation, access review, network health, camera placement, recording strategy, and commercial security maintenance."],
-  ["Rentals / Airbnb", "Smart property systems for exterior awareness where appropriate, smart locks, owner access, Wi-Fi checks, and maintenance between stays."]
+  ["Homeowners", "Smart property systems for cameras, Wi-Fi, smart locks, and exterior visibility with clean documentation and ongoing maintenance options."],
+  ["Small businesses", "Managed property systems that help owners maintain visibility, access, uptime, and operational confidence without mystery apps or undocumented devices."],
+  ["Contractors", "Jobsite visibility systems for materials, equipment, gates, storage areas, and active projects where downtime and blind spots cost money."],
+  ["Retail", "Property visibility systems for customer-facing spaces, cameras, Wi-Fi infrastructure, access control, and recurring operational reviews."],
+  ["Offices", "Access control systems, smart locks, Wi-Fi infrastructure, cameras, user permissions, documentation, and maintenance for daily operations."],
+  ["Churches", "Reliable visibility for sanctuaries, classrooms, offices, entrances, parking areas, and shared access environments."],
+  ["Warehouses", "PoE camera installation, network health, access review, recording strategy, camera coverage, and infrastructure maintenance for larger spaces."],
+  ["Airbnb / Rentals", "Smart locks, Wi-Fi checks, exterior visibility where appropriate, owner access, and documented systems between guest stays."],
+  ["Multi-property owners", "Standardized smart property infrastructure across multiple sites so systems are easier to support, maintain, and improve over time."]
 ];
