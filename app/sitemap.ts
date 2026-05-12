@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const routes = ["", "/services", "/maintenance-plans", "/industries", "/about", "/contact"];
+const routes = ["", "/services", "/maintenance-plans", "/industries", "/legacy-evaluation", "/about", "/contact"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
