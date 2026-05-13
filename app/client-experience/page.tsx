@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import { CheckCircle2 } from "lucide-react";
+import { CtaSection, PageHero, SectionHeading } from "@/components/site";
+
+export const metadata: Metadata = { title: "Client Experience", description: "The Sentinel Experience blends hospitality, premium infrastructure, documentation, continuity, and white-glove support." };
+
+export default function ClientExperiencePage() {
+  const experience = ["Private consultation", "White-glove onboarding", "Personal walkthrough", "System binder or digital portal", "Handwritten thank-you note", "Curated completion gift", "30-day optimization review", "Annual visibility review", "Private events", "Seasonal readiness reminders", "Private client communication", "Concierge-level support", "Sentinel Reserve"];
+  return <><PageHero eyebrow="Client Experience" title="The Sentinel Experience" copy="High-end clients deserve more than a clean installation. They deserve a thoughtful, calm, organized experience before, during, and after the project." /><section className="section-pad bg-white"><div className="container-tight grid gap-10 lg:grid-cols-[0.85fr_1.15fr]"><SectionHeading title="Hospitality + infrastructure + continuity." copy="Technology should feel calm, organized, and cared for. Sentinel is building a premium experience around communication, documentation, education, and long-term support." /><div className="grid gap-3 sm:grid-cols-2">{experience.map((item) => <div key={item} className="flex gap-3 rounded-md border border-slate-200 bg-frost p-4"><CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-steel" /><p className="text-sm font-medium leading-6 text-slate-700">{item}</p></div>)}</div></div></section><section className="section-pad bg-ink text-white"><div className="container-tight"><SectionHeading light title="The client should feel the difference." copy="From the first conversation to the final handoff, Sentinel is designed to feel deliberate, premium, and reassuring. The system should be clean. The documentation should be clear. The next step should always be obvious." /></div></section><CtaSection /></>;
+}
