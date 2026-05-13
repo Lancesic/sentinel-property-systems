@@ -1,0 +1,11 @@
+import type { Metadata } from "next";
+import { CheckCircle2 } from "lucide-react";
+import { partnerTypes } from "@/components/data";
+import { CtaSection, PageHero, SectionHeading } from "@/components/site";
+
+export const metadata: Metadata = { title: "Partner Network", description: "Future-facing Sentinel Partner Network for installers, technicians, specialists, and small operators interested in Sentinel Standards." };
+
+export default function PartnerNetworkPage() {
+  const standards = ["Clean installation practices", "Documentation discipline", "Respectful client communication", "Long-term maintenance mindset", "No mystery systems", "Standards before scale"];
+  return <><PageHero eyebrow="Partner Network" title="Sentinel Partner Network" copy="Sentinel is not designed to become another random installer company. It is designed to become the standards layer, relationship layer, and demand engine for trusted property infrastructure work." cta="Apply for Future Partner Opportunities" /><section className="section-pad bg-white"><div className="container-tight grid gap-10 lg:grid-cols-[0.85fr_1.15fr]"><SectionHeading title="Future partner interest" copy="As Sentinel grows, qualified installers and specialists may become Sentinel-aligned partners trained around documentation, clean installs, client experience, and long-term maintenance standards. This is future-facing interest language, not a current certification claim." /><div className="grid gap-3 sm:grid-cols-2">{partnerTypes.map((item) => <div key={item} className="rounded-md border border-slate-200 bg-frost p-4 text-sm font-semibold text-ink">{item}</div>)}</div></div></section><section className="section-pad bg-frost"><div className="container-tight grid gap-10 lg:grid-cols-[0.85fr_1.15fr]"><SectionHeading title="What Sentinel-aligned work should protect" copy="The future network is about quality, trust, documentation, and client continuity." /><div className="grid gap-3 sm:grid-cols-2">{standards.map((item) => <div key={item} className="flex gap-3 rounded-md border border-slate-200 bg-white p-4"><CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-steel" /><p className="text-sm font-medium leading-6 text-slate-700">{item}</p></div>)}</div></div></section><CtaSection /></>;
+}
